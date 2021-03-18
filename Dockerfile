@@ -30,5 +30,4 @@ COPY Printers/phpunit-github-actions-printer/src /usr/local/shared/phpunit/Print
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
 
-RUN mkdir /app
 WORKDIR /app
