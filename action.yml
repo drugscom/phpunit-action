@@ -1,0 +1,5 @@
+name: 'PHPUnit unit testing'
+description: 'PHP unit testing using PHPUnit'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
