@@ -21,7 +21,7 @@ RUN apk --no-cache add \
     php7-xml=~7.4 \
     php7-xmlwriter=~7.4
 
-RUN wget -q -O /usr/local/bin/phpunit 'https://phar.phpunit.de/phpunit-9.5.phar' \
+RUN wget -q -O /usr/local/bin/phpunit 'https://phar.phpunit.de/phpunit-9.2.phar' \
     && chmod +x /usr/local/bin/phpunit
 
 COPY autoload.php /usr/local/shared/phpunit/autoload.php

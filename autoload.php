@@ -22,14 +22,14 @@ spl_autoload_register(function ($class) {
 
 
 // bootstraping
-use PHPUnit\TextUI\CliArguments\Builder;
-use PHPUnit\TextUI\XmlConfiguration\Loader;
+use PHPUnit\TextUI\Arguments\ArgumentsBuilder;
+use PHPUnit\TextUI\Configuration\Loader;
 
 $aditionalBootstrap = getenv('PHPUNIT_ADDITIONAL_BOOTSTRAP');
 if (!empty($aditionalBootstrap)) {
 	include_once $aditionalBootstrap;
 } else {
-	$arguments = (new Builder)->fromParameters($_SERVER['argv'], []);
+	$arguments = (new ArgumentsBuilder)->fromParameters($_SERVER['argv'], []);
 	if ($arguments->hasConfiguration()) {
 		$phpunitConfiguration = (new Loader)->load($arguments->configuration())->phpunit();
 		if ($phpunitConfiguration->hasBootstrap()) {
