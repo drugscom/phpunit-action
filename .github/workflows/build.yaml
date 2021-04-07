@@ -23,7 +23,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.build_matrix.outputs.matrix) }}
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -41,8 +41,6 @@ jobs:
           context: .
           file: ${{ matrix.dockerfile }}
           labels: |
-            com.github.actions.name=PHPUnit unit testing
-            com.github.actions.description=PHP unit testing using PHPUnit
             org.opencontainers.image.source=${{ github.event.repository.html_url }}
             org.opencontainers.image.revision=${{ github.sha }}
           push: true
