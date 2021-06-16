@@ -1,4 +1,4 @@
-FROM docker.io/library/alpine:3.13
+FROM docker.io/library/alpine:3.14.0
 
 LABEL 'com.github.actions.name'='PHPUnit unit testing'
 LABEL 'com.github.actions.description'='PHP unit testing using PHPUnit'
