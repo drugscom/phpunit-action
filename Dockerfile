@@ -4,6 +4,7 @@ LABEL 'com.github.actions.name'='PHPUnit unit testing'
 LABEL 'com.github.actions.description'='PHP unit testing using PHPUnit'
 
 RUN apk --no-cache add \
+    file=~5 \
     php8=~8.0 \
     php8-ctype=~8.0 \
     php8-curl=~8.0 \
@@ -17,6 +18,7 @@ RUN apk --no-cache add \
     php8-mysqli=~8.0 \
     php8-openssl=~8.0 \
     php8-pdo=~8.0 \
+    php8-pecl-memcached=~3 \
     php8-phar=~8.0 \
     php8-session=~8.0 \
     php8-simplexml=~8.0 \
