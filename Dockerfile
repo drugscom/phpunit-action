@@ -1,4 +1,4 @@
-FROM docker.io/library/alpine:3.14.2
+FROM alpine:3.14.2
 
 LABEL 'com.github.actions.name'='PHPUnit unit testing'
 LABEL 'com.github.actions.description'='PHP unit testing using PHPUnit'
@@ -33,9 +33,6 @@ RUN apk --no-cache add \
 
 RUN wget -q -O /usr/local/bin/phpunit 'https://phar.phpunit.de/phpunit-9.5.6.phar' \
     && chmod +x /usr/local/bin/phpunit
-
-COPY autoload.php /usr/local/shared/phpunit/autoload.php
-COPY Printers/phpunit-github-actions-printer/src /usr/local/shared/phpunit/Printers/mheap/GithubActionsReporter
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]

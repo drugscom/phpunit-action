@@ -1,3 +1,0 @@
-[submodule "Printers/phpunit-github-actions-printer"]
-	path = Printers/phpunit-github-actions-printer
-	url = https://github.com/mheap/phpunit-github-actions-printer.git
