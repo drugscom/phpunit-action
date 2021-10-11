@@ -31,7 +31,7 @@ RUN apk --no-cache add \
     php8-xsl=~8.0 \
     && ln -s /usr/bin/php8 /usr/local/bin/php
 
-RUN wget -q -O /usr/local/bin/phpunit 'https://phar.phpunit.de/phpunit-9.5.6.phar' \
+RUN wget -q -O /usr/local/bin/phpunit 'https://phar.phpunit.de/phpunit-9.5.10.phar' \
     && chmod +x /usr/local/bin/phpunit
 
 COPY entrypoint.sh /entrypoint.sh
