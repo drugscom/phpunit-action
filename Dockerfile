@@ -18,12 +18,14 @@ RUN apk --no-cache add \
     php8-mysqli=~8.0 \
     php8-openssl=~8.0 \
     php8-pdo=~8.0 \
+    php8-pdo_mysql=~8.0 \
     php8-pecl-memcached=~3 \
     php8-phar=~8.0 \
     php8-session=~8.0 \
     php8-simplexml=~8.0 \
     php8-soap=~8.0 \
     php8-sockets=~8.0 \
+    php8-tidy=~8.0 \
     php8-tokenizer=~8.0 \
     php8-xml=~8.0 \
     php8-xmlreader=~8.0 \
