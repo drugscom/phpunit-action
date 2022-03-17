@@ -1,4 +1,4 @@
-FROM alpine:3.15.0
+FROM alpine:3.15.1
 
 LABEL 'com.github.actions.name'='PHPUnit unit testing'
 LABEL 'com.github.actions.description'='PHP unit testing using PHPUnit'
